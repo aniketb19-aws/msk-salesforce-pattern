@@ -84,7 +84,7 @@ Resources:
       Type: AWS::CloudFormation::Stack
       DependsOn: MSKCluster
       Properties:
-        TemplateURL: "./pipes.yaml"
+        TemplateURL: "./pipes-stack.yaml"
         Parameters:
           MskClusterPrivateSubnet1: !GetAtt VPCStack.Outputs.PrivateSubnet1
           MskClusterPrivateSubnet2: !GetAtt VPCStack.Outputs.PrivateSubnet2
